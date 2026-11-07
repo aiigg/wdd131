@@ -1,0 +1,39 @@
+@media screen and (min-width: 640px) {
+  .header-content {
+    justify-content: flex-start;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  /* Hide hamburger menu button on desktop */
+  #menu {
+    display: none;
+  }
+
+  /* Display navigation inline */
+  nav {
+    display: block !important;
+    margin-top: 0;
+  }
+
+  .navigation {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .navigation li a {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+
+  /* 3-column grid for larger view */
+  .res-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}

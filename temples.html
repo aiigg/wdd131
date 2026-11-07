@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Temple Album page showcasing temples from around the world for WDD 131.">
+  <meta name="author" content="Godiva Aigbosurea">
+  <title>Temple Album</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Mobile-first CSS -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <!-- Desktop / Large view CSS -->
+  <link rel="stylesheet" href="styles/temples-large.css">
+
+  <!-- JavaScript -->
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Temple Album</h1>
+      <button id="menu" aria-label="Toggle Navigation Menu"></button>
+    </div>
+    <nav>
+      <ul class="navigation">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Old</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Large</a></li>
+        <li><a href="#">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Home</h2>
+    <div class="res-grid">
+      <figure>
+        <img src="images/aba-nigeria.png" alt="Aba Nigeria Temple" loading="lazy">
+        <figcaption>Aba Nigeria</figcaption>
+      </figure>
+      <figure>
+        <img src="images/abidjan-ivory-coast.png" alt="Abidjan Ivory Coast Temple" loading="lazy">
+        <figcaption>Abidjan Ivory Coast</figcaption>
+      </figure>
+      <figure>
+        <img src="images/accra-ghana.png" alt="Accra Ghana Temple" loading="lazy">
+        <figcaption>Accra Ghana</figcaption>
+      </figure>
+      <figure>
+        <img src="images/adelaide-australia.png" alt="Adelaide Australia Temple" loading="lazy">
+        <figcaption>Adelaide Australia</figcaption>
+      </figure>
+      <figure>
+        <img src="images/alabang-philippines.png" alt="Alabang Philippines Temple" loading="lazy">
+        <figcaption>Alabang Philippines</figcaption>
+      </figure>
+      <figure>
+        <img src="images/albuquerque-new-mexico.png" alt="Albuquerque New Mexico Temple" loading="lazy">
+        <figcaption>Albuquerque New Mexico</figcaption>
+      </figure>
+      <figure>
+        <img src="images/anchorage-alaska.png" alt="Anchorage Alaska Temple" loading="lazy">
+        <figcaption>Anchorage Alaska</figcaption>
+      </figure>
+      <figure>
+        <img src="images/antofagasta-chile.png" alt="Antofagasta Chile Temple" loading="lazy">
+        <figcaption>Antofagasta Chile</figcaption>
+      </figure>
+      <figure>
+        <img src="images/apia-samoa.png" alt="Apia Samoa Temple" loading="lazy">
+        <figcaption>Apia Samoa</figcaption>
+      </figure>
+    </div>
+  </main>
+
+      <footer>
+        <p>&copy;<span id="currentyear"></span> 🚀 Godiva Aigbosurea 🚀 Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
