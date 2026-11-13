@@ -1,0 +1,162 @@
+:root {
+    --primary-color: #0d5c56;       /* Deep Tropical Teal */
+    --secondary-color: #148077;     /* Lighter Teal accent */
+    --accent-color: #f7f9f6;        /* Soft warm off-white background */
+    --text-color: #2d3748;          /* High contrast dark slate text */
+    --light-text: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --heading-font: 'Plus Jakarta Sans', sans-serif;
+    --body-font: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--accent-color);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    text-align: center;
+    padding: 1.75rem 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Hero Image */
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Mobile Layout Cards */
+.card {
+    background-color: var(--light-text);
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid #edf2f7;
+    text-align: center;
+}
+
+.card h2 {
+    font-family: var(--heading-font);
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.weather-icon-mobile {
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 64px;
+    height: 64px;
+}
+
+/* Definition List Grid for Labels & Values */
+dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 0.75rem;
+    max-width: 340px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+}
+
+dt {
+    font-weight: 600;
+    color: #4a5568;
+    text-align: right;
+}
+
+dd {
+    text-align: left;
+    color: var(--text-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+footer p + p {
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* Wider View Media Query (Desktop layout overlay matching wireframe) */
+@media (min-width: 768px) {
+    main {
+        position: relative;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .hero img {
+        max-height: 750px;
+    }
+
+    .card {
+        position: absolute;
+        background-color: var(--card-bg);
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        padding: 1.25rem 1.5rem;
+        width: 320px;
+        backdrop-filter: blur(8px);
+    }
+
+    /* Modern Overlay Banner Headings */
+    .card h2 {
+        background-color: var(--primary-color);
+        color: var(--light-text);
+        text-align: left;
+        padding: 0.65rem 1rem;
+        margin: -1.25rem -1.5rem 1.25rem -1.5rem;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    .data {
+        top: 2.5rem;
+        left: 2.5rem;
+    }
+
+    .weather {
+        bottom: 2.5rem;
+        right: 2.5rem;
+    }
+
+    /* Hide mobile SVG in large view */
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    /* Pseudo-element weather emoticon in large view */
+    .weather h2::after {
+        content: " ⛅";
+        margin-left: 0.5rem;
+    }
+}
